@@ -13,7 +13,7 @@ public class SpringInitializer implements WebApplicationInitializer {
         servletContext.setInitParameter("contextClass", "org.springframework.web.context.support.AnnotationConfigWebApplicationContext");
         servletContext.setInitParameter("contextConfigLocation", "io.pivotal.pal");
         servletContext.addListener(ContextLoaderListener.class);
-
+// This is test
         servletContext.addFilter("springSessionRepositoryFilter", DelegatingFilterProxy.class)
                 .addMappingForUrlPatterns(null, false, "/*");
     }
